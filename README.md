@@ -11,7 +11,7 @@ we will add all javascript actions to this program soon
 # road map
 creating gui(100% done)
 
-creating all actions(20% done)
+creating all actions(60% done)
 
 creating exe file(0% done)
 
