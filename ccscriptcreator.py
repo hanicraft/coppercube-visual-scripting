@@ -3,6 +3,9 @@ from tkinter import *
 from tkinter.ttk import Progressbar
 from tkinter.ttk import Combobox
 from tkinter.ttk import Notebook
+from tkinter.filedialog import askopenfilename
+from tkinter.messagebox import showerror
+from tkinter.filedialog import asksaveasfilename
 import tkinter.font
 
 
@@ -21,7 +24,7 @@ class Widget1():
             self.w1 = Frame(parent)
             self.w1.configure(bg = '#666666')
             self.w1.place(x = 0, y = 0, width = 710, height = 580)
-        self.label1 = Label(self.w1, text = "   Version 0.1 By HaniCraft", fg = "#2f2f2f", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.label1 = Label(self.w1, text = "   Version 0.6 By HaniCraft", fg = "#2f2f2f", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.label1.place(x = 0, y = 550, width = 130, height = 32)
         self.output = Text(self.w1, font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.output.place(x = 10, y = 10, width = 390, height = 370)
@@ -51,21 +54,39 @@ class Widget1():
         self.label3.place(x = 260, y = 390, width = 90, height = 22)
         self.button7 = Button(self.w1, text = "clone node", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.button7.place(x = 260, y = 420, width = 120, height = 22)
+        self.button7['command'] = self.clonenode
         self.button8 = Button(self.w1, text = "remove node", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.button8.place(x = 260, y = 450, width = 120, height = 22)
+        self.button8['command'] = self.removenode
         self.label4 = Label(self.w1, text = "various", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.label4.place(x = 420, y = 20, width = 90, height = 22)
         self.label5 = Label(self.w1, text = "camera", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.label5.place(x = 260, y = 480, width = 90, height = 22)
         self.button9 = Button(self.w1, text = "set active camera", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.button9.place(x = 260, y = 510, width = 120, height = 22)
+        self.button9['command'] = self.setcamera
         self.button10 = Button(self.w1, text = "get active camera", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.button10.place(x = 260, y = 540, width = 120, height = 22)
+        self.button10['command'] = self.getcamera
         self.switch_scene = Button(self.w1, text = "switch scene", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.switch_scene.place(x = 420, y = 110, width = 140, height = 22)
         self.switch_scene['command'] = self.scene_switch
-        self.button12 = Button(self.w1, text = "get current node", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.button12 = Button(self.w1, text = "get current node", bg = "#ffffff", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.button12.place(x = 390, y = 420, width = 120, height = 22)
+        self.button12['command'] = self.getcurrentnode
+        self.label6 = Label(self.w1, text = "remember to format your code", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.label6.place(x = 550, y = 510, width = 150, height = 22)
+        self.label7 = Label(self.w1, text = "before adding it to coppercube", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.label7.place(x = 550, y = 500, width = 150, height = 22)
+        self.button13 = Button(self.w1, text = "export action", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.button13.place(x = 610, y = 10, width = 90, height = 22)
+        self.button13['command'] = self.save
+        self.label8 = Label(self.w1, text = "remeber to add "action_" to", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.label8.place(x = 550, y = 520, width = 140, height = 22)
+        self.label9 = Label(self.w1, text = "your file name so coppercube", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.label9.place(x = 550, y = 530, width = 140, height = 22)
+        self.label10 = Label(self.w1, text = "can reconize it", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.label10.place(x = 550, y = 540, width = 90, height = 22)
 
     def setvar(self):
         self.output.insert('1.0', "\n ccbSetCopperCubeVariable(varible name, value of varible)")
@@ -86,22 +107,28 @@ class Widget1():
         self.output.insert('1.0', "\n ccbRegisterMouseDownEvent(mousePressedDown);\n function mousePressedDown(button){     \n print(A mouse button was presssed down: + button); \n }")
 
     def mouseup(self):
-        self.onmouseup.insert('1.0', "\n ccbRegisterMouseUpEvent(mousePressedUp); \n function mousePressedUp(button) \n {   \n print(A mouse button was presssed up: + button); \n }")
+        self.output.insert('1.0', "\n ccbRegisterMouseUpEvent(mousePressedUp); \n function mousePressedUp(button) \n {   \n print(A mouse button was presssed up: + button); \n }")
 
     def clonenode(self):
-        print('clonenode')
+        self.output.insert('1.0', "\n var sourceNode = ccbGetSceneNodeFromName(myNode); \n var newscenenode = ccbCloneSceneNode(sourceNode);")
 
     def removenode(self):
-        print('removenode')
+        self.output.insert('1.0', "\n ccbRemoveSceneNode( ccbGetSceneNodeFromName(sceneNode) );")
 
     def getcurrentnode(self):
-        print('getcurrentnode')
+        self.output.insert('1.0', "\n ccbGetCurrentNode()")
 
     def setcamera(self):
-        print('setcamera')
+        self.output.insert('1.0',"\n ccbGetActiveCamera()")
 
     def getcamera(self):
-        print('getcamera')
+        self.output.insert('1.0',"\n ccbSetActiveCamera(cameraNode)")
+
+    def save(self):
+        outputtext = self.output.get("1.0", "end-1c")
+        actionsave = asksaveasfilename(defaultextension="js")
+        with open(actionsave, "w") as fname3:
+            fname3.write(outputtext)
 
 if __name__ == '__main__':
     a = Widget1(0)
