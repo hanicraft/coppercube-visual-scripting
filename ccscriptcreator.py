@@ -81,7 +81,7 @@ class Widget1():
         self.button13 = Button(self.w1, text = "export action", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.button13.place(x = 610, y = 10, width = 90, height = 22)
         self.button13['command'] = self.save
-        self.label8 = Label(self.w1, text = "remeber to add "action_" to", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.label8 = Label(self.w1, text = "remeber to add action_ to", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.label8.place(x = 550, y = 520, width = 140, height = 22)
         self.label9 = Label(self.w1, text = "your file name so coppercube", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.label9.place(x = 550, y = 530, width = 140, height = 22)
