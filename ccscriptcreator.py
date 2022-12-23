@@ -68,25 +68,25 @@ class Widget1():
         self.button12.place(x = 390, y = 420, width = 120, height = 22)
 
     def setvar(self):
-        self.output.insert('1.0', "ccbSetCopperCubeVariable(varible name, value of varible)")
+        self.output.insert('1.0', "\n ccbSetCopperCubeVariable(varible name, value of varible)")
 
     def getvar(self):
-        self.output.insert('1.0', "ccbGetCopperCubeVariable(varible name)")
+        self.output.insert('1.0', "\n ccbGetCopperCubeVariable(varible name)")
 
     def scene_switch(self):
-        self.output.insert('1.0', "ccbSwitchToScene(sceneName)")
+        self.output.insert('1.0', "\n ccbSwitchToScene(sceneName)")
 
     def keydown(self):
-        self.output.insert('1.0', "ccbRegisterKeyDownEvent(keyPressedDown); function keyPressedDown(keyCode) {    print(A key was pressed down: + keyCode);}")
+        self.output.insert('1.0', "\n ccbRegisterKeyDownEvent(keyPressedDown); \n function keyPressedDown(keyCode) \n {    \n print(A key was pressed down: + keyCode); \n }")
 
     def keyup(self):
-        self.output.insert('1.0', "ccbRegisterKeyUpEvent(keyPressedUp); function keyPressedUp(keyCode) {  print(A key was left up: + keyCode);}")
+        self.output.insert('1.0', "\n ccbRegisterKeyUpEvent(keyPressedUp); \n function keyPressedUp(keyCode) \n {  \n print(A key was left up: + keyCode); \n }")
 
     def mousedown(self):
-        self.output.insert('1.0', "ccbRegisterMouseDownEvent(mousePressedDown); function mousePressedDown(button){   print(A mouse button was presssed down: + button);}")
+        self.output.insert('1.0', "\n ccbRegisterMouseDownEvent(mousePressedDown);\n function mousePressedDown(button){     \n print(A mouse button was presssed down: + button); \n }")
 
     def mouseup(self):
-        self.onmouseup.insert('1.0', "ccbRegisterMouseUpEvent(mousePressedUp); function mousePressedUp(button){   print(A mouse button was presssed up: + button);}")
+        self.onmouseup.insert('1.0', "\n ccbRegisterMouseUpEvent(mousePressedUp); \n function mousePressedUp(button) \n {   \n print(A mouse button was presssed up: + button); \n }")
 
     def clonenode(self):
         print('clonenode')
