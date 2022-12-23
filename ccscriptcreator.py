@@ -36,42 +36,42 @@ class Widget1():
         self.get_varible = Button(self.w1, text = "get varible", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.get_varible.place(x = 420, y = 80, width = 140, height = 22)
         self.get_varible['command'] = self.getvar
-        self.onkeydown = Button(self.w1, text = "on keydown", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.onkeydown = Button(self.w1, text = "on keydown", bg = "#005500", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.onkeydown.place(x = 60, y = 420, width = 140, height = 22)
         self.onkeydown['command'] = self.keydown
         self.label2 = Label(self.w1, text = "Events", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.label2.place(x = 60, y = 390, width = 90, height = 22)
-        self.onkeyup = Button(self.w1, text = "on keyup", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.onkeyup = Button(self.w1, text = "on keyup", bg = "#005500", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.onkeyup.place(x = 60, y = 450, width = 140, height = 22)
         self.onkeyup['command'] = self.keyup
-        self.onmousedown = Button(self.w1, text = "on mouse down", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.onmousedown = Button(self.w1, text = "on mouse down", bg = "#005500", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.onmousedown.place(x = 60, y = 480, width = 140, height = 22)
         self.onmousedown['command'] = self.mousedown
-        self.onmouseup = Button(self.w1, text = "on mouse up", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.onmouseup = Button(self.w1, text = "on mouse up", bg = "#005500", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.onmouseup.place(x = 60, y = 510, width = 140, height = 22)
         self.onmouseup['command'] = self.mouseup
         self.label3 = Label(self.w1, text = "scene nodes", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.label3.place(x = 260, y = 390, width = 90, height = 22)
-        self.button7 = Button(self.w1, text = "clone node", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.button7 = Button(self.w1, text = "clone node", bg = "#00007f", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.button7.place(x = 260, y = 420, width = 120, height = 22)
         self.button7['command'] = self.clonenode
-        self.button8 = Button(self.w1, text = "remove node", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.button8 = Button(self.w1, text = "remove node", bg = "#00007f", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.button8.place(x = 260, y = 450, width = 120, height = 22)
         self.button8['command'] = self.removenode
         self.label4 = Label(self.w1, text = "various", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.label4.place(x = 420, y = 20, width = 90, height = 22)
         self.label5 = Label(self.w1, text = "camera", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.label5.place(x = 260, y = 480, width = 90, height = 22)
-        self.button9 = Button(self.w1, text = "set active camera", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.button9 = Button(self.w1, text = "set active camera", bg = "#550000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.button9.place(x = 260, y = 510, width = 120, height = 22)
         self.button9['command'] = self.setcamera
-        self.button10 = Button(self.w1, text = "get active camera", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.button10 = Button(self.w1, text = "get active camera", bg = "#550000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.button10.place(x = 260, y = 540, width = 120, height = 22)
         self.button10['command'] = self.getcamera
         self.switch_scene = Button(self.w1, text = "switch scene", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.switch_scene.place(x = 420, y = 110, width = 140, height = 22)
         self.switch_scene['command'] = self.scene_switch
-        self.button12 = Button(self.w1, text = "get current node", bg = "#ffffff", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.button12 = Button(self.w1, text = "get current node", bg = "#00007f", fg = "#ffffff", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.button12.place(x = 390, y = 420, width = 120, height = 22)
         self.button12['command'] = self.getcurrentnode
         self.label6 = Label(self.w1, text = "remember to format your code", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
@@ -96,6 +96,23 @@ class Widget1():
         self.funcname = Entry(self.w1, font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
         self.funcname.place(x = 570, y = 140, width = 130, height = 22)
         self.funcname.insert(INSERT, "enter function name")
+        self.label11 = Label(self.w1, text = "scripted actions", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.label11.place(x = 420, y = 170, width = 90, height = 22)
+        self.nodename = Entry(self.w1, font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.nodename.place(x = 390, y = 450, width = 120, height = 22)
+        self.nodename.insert(INSERT, "enter node name")
+        self.healthbar = Button(self.w1, text = "healthbar", bg = "#55ff7f", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.healthbar.place(x = 420, y = 200, width = 140, height = 22)
+        self.healthbar['command'] = self.health_bar
+        self.dolater = Button(self.w1, text = "do later", bg = "#55ff7f", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.dolater.place(x = 420, y = 230, width = 140, height = 22)
+        self.dolater['command'] = self.do_later
+        self.loadtexture = Button(self.w1, text = "load texture", bg = "#55ff7f", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.loadtexture.place(x = 570, y = 200, width = 130, height = 22)
+        self.loadtexture['command'] = self.load_texture
+        self.replace = Button(self.w1, text = "replace", bg = "#55ff7f", fg = "#000000", font = tkinter.font.Font(family = "MS Shell Dlg 2", size = 8), cursor = "arrow", state = "normal")
+        self.replace.place(x = 570, y = 230, width = 130, height = 22)
+        self.replace['command'] = self.replace_1
 
     def setvar(self):
         self.output.insert('1.0', "\n ccbSetCopperCubeVariable("+ self.varname.get() +", value of varible)")
@@ -119,10 +136,10 @@ class Widget1():
         self.output.insert('1.0', "\n ccbRegisterMouseUpEvent(mousePressedUp); \n function mousePressedUp(button) \n {   \n print(A mouse button was presssed up: + button); \n }")
 
     def clonenode(self):
-        self.output.insert('1.0', "\n var sourceNode = ccbGetSceneNodeFromName(myNode); \n var newscenenode = ccbCloneSceneNode(sourceNode);")
+        self.output.insert('1.0', "\n var sourceNode = ccbGetSceneNodeFromName("+ self.nodename.get() +"); \n var newscenenode = ccbCloneSceneNode(sourceNode);")
 
     def removenode(self):
-        self.output.insert('1.0', "\n ccbRemoveSceneNode( ccbGetSceneNodeFromName(sceneNode) );")
+        self.output.insert('1.0', "\n ccbRemoveSceneNode( ccbGetSceneNodeFromName("+ self.nodename.get() +") );")
 
     def getcurrentnode(self):
         self.output.insert('1.0', "\n ccbGetCurrentNode()")
@@ -141,6 +158,27 @@ class Widget1():
 
     def func_create(self):
         self.output.insert('1.0', "function "+ self.funcname.get() +"() \n { \n \n }")
+
+    def health_bar(self):
+        
+        with open("data/healthbar.js", "r") as fname2:
+            text = fname2.read()
+            self.output.insert('1.0',text)
+
+    def do_later(self):
+        with open("data/dolater.js", "r") as fname2:
+            text = fname2.read()
+            self.output.insert('1.0',text)
+
+    def replace_1(self):
+        with open("data/replace.js", "r") as fname2:
+            text = fname2.read()
+            self.output.insert('1.0',text)
+
+    def load_texture(self):
+        with open("data/loadtexture.js", "r") as fname2:
+            text = fname2.read()
+            self.output.insert('1.0',text)
 
 if __name__ == '__main__':
     a = Widget1(0)
