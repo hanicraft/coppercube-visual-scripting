@@ -11,13 +11,13 @@ we will add all javascript actions to this program soon
 # road map
 creating gui(100% done)
 
-creating all actions(60% done)
+creating all actions(80% done)
 
 creating exe file(0% done)
 
 # links
 
-screenshot of program
+screenshot of program version 0.1
 
 
 https://s2.uupload.ir/files/coppercube_visual_scripting_v0.1_bint.png
