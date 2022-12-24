@@ -13,7 +13,7 @@ creating gui(100% done)
 
 creating all actions(80% done)
 
-creating exe file(0% done)
+creating exe file(100% done)
 
 # links
 
